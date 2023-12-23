@@ -63,3 +63,15 @@ SELECT color FROM table WHERE color IN ('red','blue');
 SELECT color FROM table WHERE color NOT IN ('red','blue');
 
 SELECT * FROM payment WHERE amount IN (0.99,1.98,1.99);
+
+-- LIKE and ILIKE
+
+SELECT * FROM customer WHERE first_name LIKE 'J%';
+
+SELECT * FROM customer WHERE first_name ILIKE 'J%' AND ILIKE 's%';
+
+SELECT * FROM customer WHERE first_name LIKE '_her%';
+
+SELECT * FROM customer WHERE first_name NOT LIKE '_her%';
+
+
