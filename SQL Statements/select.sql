@@ -13,3 +13,11 @@ SELECT DISTINCT release_year FROM film;
 SELECT DISTINCT(rental_rate) FROM film;
 
 SELECT DISTINCT rating FROM film;
+
+SELECT COUNT(name) FROM table;
+
+SELECT COUNT(choice) FROM table;
+
+SELECT COUNT(*) FROM table;
+
+SELECT COUNT(DISTINCT name) FROM table;
