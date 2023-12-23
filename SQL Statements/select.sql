@@ -45,3 +45,21 @@ SELECT store_id,first_name FROM customer ORDER BY store_id DESC,first_name ASC;
 SELECT * FROM payment ORDER BY payment_date DESC LIMIT 5;
 
 SELECT * FROM payment WHERE amount != 0.00 ORDER BY payment_date DESC LIMIT 5;
+
+-- BETWEEN
+
+SELECT * FROM payment WHERE amount BETWEEN 8 AND 9;
+
+SELECT COUNT(*) FROM payment WHERE amount BETWEEN 8 AND 9;
+
+SELECT * FROM payment WHERE amount NOT BETWEEN 8 AND 9;
+
+SELECT * FROM payment WHERE payment_date BETWEEN '2023-02-01' AND '2023-02-15';
+
+-- IN
+
+SELECT color FROM table WHERE color IN ('red','blue');
+
+SELECT color FROM table WHERE color NOT IN ('red','blue');
+
+SELECT * FROM payment WHERE amount IN (0.99,1.98,1.99);
