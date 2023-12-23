@@ -33,3 +33,15 @@ SELECT COUNT(*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AN
 SELECT * FROM film WHERE rating != 'R';
 
 SELECT email FROM customer WHERE first_name= 'Nancy' AND last_name='Thomas';
+
+-- SELECT column_1, column_2 FROM table ORDER BY column_1 ASC/DESC
+
+SELECT company,name,sales FROM table ORDER BY company, sales
+
+SELECT store_id,first_name FROM customer ORDER BY store_id DESC,first_name ASC;
+
+-- LIMIT
+
+SELECT * FROM payment ORDER BY payment_date DESC LIMIT 5;
+
+SELECT * FROM payment WHERE amount != 0.00 ORDER BY payment_date DESC LIMIT 5;
