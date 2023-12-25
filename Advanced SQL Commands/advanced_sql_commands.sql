@@ -35,6 +35,21 @@ FROM payment;
 
 SELECT DISTINCT(TO_CHAR(payment_date,'MONTH')) FROM payment;
 
+-- Mathematical Functions and Operators
+SELECT rental_rate/replacement_cost FROM film;
+SELECT ROUND(rental_rate/replacement_cost,2)*100 AS percent_cost FROM film;
+
+-- String Functions and Operators
+SELECT LENGTH(first_name) FROM customer;
+
+SELECT first_name || ' ' || last_name AS full_name
+FROM customer
+
+SELECT LEFT(first_name,1) || last_name || '@gmail.com'
+FROM customer;
+
+
+
 
 
 
