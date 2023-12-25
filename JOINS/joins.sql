@@ -45,3 +45,25 @@ ON customer.customer_id = payment.customer_id
 WHERE customer.customer_id IS NULL
 OR payment.payment_id IS NULL;
 
+-- Left Outer Join
+
+-- SELECT * FROM TableA
+-- LEFT OUTER JOIN TableB
+-- ON TableA.col_match = TableB.col_match;
+
+SELECT * FROM Registrations
+LEFT OUTER JOIN Logins
+ON Registrations.name = Logins.name;
+
+SELECT * FROM TableA
+LEFT OUTER JOIN TableB
+ON TableA.col_match = TableB.col_match
+WHERE TableB.id IS NULL;
+
+SELECT film.film_id, title, inventory_id, store_id
+FROM film
+LEFT JOIN inventory 
+ON inventory.film_id = film.film_id;
+
+
+
