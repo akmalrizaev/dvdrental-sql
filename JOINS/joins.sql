@@ -65,5 +65,18 @@ FROM film
 LEFT JOIN inventory 
 ON inventory.film_id = film.film_id;
 
+-- Right Joins
+
+-- SELECT * FROM TableA
+-- RIGHT OUTER JOIN TableB
+-- ON TableA.col_match = TableB.col_match;
+
+SELECT * FROM TableA
+RIGHT OUTER JOIN TableB
+ON TableA.col_match = TableB.col_match
+WHERE TableA.id IS NULL;
+
+
+
 
 
