@@ -83,6 +83,25 @@ WHERE EXISTS
 where p.customer_id = c.customer_id
 AND amount > 11);
 
+-- SelfJoin
+
+SELECT tableA.col, tableB.col
+FROM table AS tableA
+JOIN table AS tableB ON
+tableA.some_col = tableB.other_col;
+
+SELECT emp.name, report.name AS rep
+FROM employees AS emp
+JOIN employees AS report 
+ON emp.emp_id = report.report_id;
+
+SELECT f1.title, f2.title, f1.length
+FROM film AS f1
+INNER JOIN film AS f2 
+ON f1.film_id != f2.film_id
+AND f1.length = f2.length;
+
+
 
 
 
