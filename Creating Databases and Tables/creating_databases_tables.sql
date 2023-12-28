@@ -114,6 +114,16 @@ RENAME COLUMN person TO people;
 ALTER TABLE new_info
 ALTER COLUMN people DROP NOT NULL;
 
+-- DROP
+ALTER TABLE table_name
+DROP COLUMN col_name;
+
+ALTER TABLE table_name
+DROP COLUMN col_name CASCADE;
+
+ALTER TABLE table_name
+DROP COLUMN IF EXISTS col_name;
+
 
 
 
