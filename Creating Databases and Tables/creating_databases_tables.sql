@@ -62,6 +62,32 @@ INSERT INTO job(job_name)
 VALUES
 ('Astronaut')
 
+-- UPDATE
+-- UPDATE table 
+-- SET column1 = value1,
+-- 	column2 = value2 ,...
+-- WHERE condition;
+
+UPDATE account
+SET last_login = CURRENT_TIMESTAMP
+WHERE last_login IS NULL;
+
+UPDATE TableA
+SET original_col = TableB.new_col
+FROM tableB
+WHERE TableA.id = TableB.id;
+
+UPDATE account_job
+SET hire_date = account.created_on
+FROM account
+WHERE account_job.user_id = account.user_id
+
+UPDATE account
+SET last_login = CURRENT_TIMESTAMP
+RETURNING email,created_on,last_login;
+
+
+
 
 
 
