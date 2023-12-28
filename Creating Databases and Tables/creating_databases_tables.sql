@@ -99,6 +99,22 @@ DELETE FROM job
 WHERE job_name = 'Cowboy'
 RETURNING job_id,job_name;
 
+-- ALTER
+ALTER TABLE table_name action
+
+ALTER TABLE table_name
+ADD COLUMN new_col TYPE
+
+ALTER TABLE information
+RENAME TO new_info
+
+ALTER TABLE new_info
+RENAME COLUMN person TO people;
+
+ALTER TABLE new_info
+ALTER COLUMN people DROP NOT NULL;
+
+
 
 
 
