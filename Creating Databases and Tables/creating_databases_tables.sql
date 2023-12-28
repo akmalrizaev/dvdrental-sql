@@ -43,7 +43,24 @@ CREATE TABLE account_job(
 	hire_date TIMESTAMP
 );
 
+-- INSERT
+-- INSERT INTO table (column1, column2,...)
+-- VALUES
+-- (value1, value2, ...),
+-- (value1, value2, ...),...;
 
+INSERT INTO table(column1, column2, ...)
+SELECT column1, column2, ...
+FROM another_table
+WHERE condition;
+
+INSERT INTO account(username,password,email,created_on)
+VALUES
+('Alex','password','alex@mail.com',CURRENT_TIMESTAMP);
+
+INSERT INTO job(job_name)
+VALUES
+('Astronaut')
 
 
 
