@@ -86,6 +86,19 @@ UPDATE account
 SET last_login = CURRENT_TIMESTAMP
 RETURNING email,created_on,last_login;
 
+-- DELETE
+
+DELETE FROM table 
+WHERE row_id = 1;
+
+DELETE FROM tableA
+USING tableB
+WHERE tableA.id=TableB.id;
+
+DELETE FROM job
+WHERE job_name = 'Cowboy'
+RETURNING job_id,job_name;
+
 
 
 
